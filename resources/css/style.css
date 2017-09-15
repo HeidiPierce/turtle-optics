@@ -91,9 +91,11 @@ nav .response-menu {
 }
 .inner-box {
   display: flex;
+
 }
-.business-class {
-  flex-direction: column;
+.business-info {
+  width: 50%;
+  padding: 0 3rem 5rem 0;
 }
 .business-info h2 {
   font-family: Helvetica;
@@ -101,6 +103,14 @@ nav .response-menu {
   font-size: 1rem;
   background-color: cadetblue;
   color: white;
+  width: 10rem;
+  padding: 0.5rem 1.25rem;
+
+}
+.business-info p {
+  padding-top: 1rem;
+  width: 70%;
+
 }
 @media only screen and (max-width: 480px) {
     .logo h2 {
@@ -142,7 +152,10 @@ nav .response-menu {
     .icon p {
       font-size: 0.77rem;
     }
-    .inner-box .business-class {
-      flex-direction: column;
+    .inner-box {
+      display: block;
+    }
+    .business-info {
+      margin: 0 auto;
     }
 }
