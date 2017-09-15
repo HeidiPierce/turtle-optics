@@ -1,0 +1,148 @@
+/*body*/
+body {
+  font-size: 18px;
+  line-height: 1.4;
+  background-color: white;
+  box-sizing: border-box;
+}
+/*header*/
+header {
+  background-color: cadetblue;
+  font-family: Helvetica;
+  color: white;
+  font-size: 1rem;
+}
+.inner-box {
+  max-width: 960px;
+  margin: 0 auto;
+}
+header .inner-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  display: flex;
+  height: 100%;
+}
+.logo img {
+  height: 1.5rem;
+}
+.logo h2 {
+  padding: 5px 20px 0;
+}
+nav .response-menu {
+  display: none;
+}
+.response-menu a {
+  color: white;
+  text-decoration: none;
+}
+.menu li {
+  display: inline-block;
+  padding: 20px 10px;
+}
+.menu {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+.stretch {
+  background-image: url("../images/main-banner-glasses.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30rem;
+  width: 100%;
+
+}
+.main-banner-box {
+  display: flex;
+  align-items: center;
+}
+.banner-text {
+  background-color: white;
+  font-family: Helvetica;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.2;
+  padding: 1.5rem 5rem;
+}
+.benefits .inner-box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem;
+}
+.icon img {
+  width: 5rem;
+}
+.icon:first-child img {
+  width: 3.5rem;
+}
+.icon:nth-child(2) {
+  padding: 0 6rem;
+}
+.icon p {
+  font-family: Helvetica;
+  padding-top: 15px;
+}
+.inner-box {
+  display: flex;
+}
+.business-class {
+  flex-direction: column;
+}
+.business-info h2 {
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: cadetblue;
+  color: white;
+}
+@media only screen and (max-width: 480px) {
+    .logo h2 {
+      display: none;
+    }
+    nav {
+      text-align: center;
+      padding: 10px;
+      display: block;
+    }
+    nav .response-menu {
+      display: block;
+    }
+    nav ul {
+      display: none;
+    }
+    .main-banner-box {
+      align-items: flex-end;
+      height: 17rem;
+    }
+    .banner-img {
+      width: 100%;
+    }
+    .banner-text {
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 15px;
+      padding: 1rem 0;
+      width: 100%;
+    }
+    .benefits .inner-box {
+      flex-direction: column;
+      align-items: center;
+      padding: 3.77rem 0;
+    }
+    .icon:nth-child(2) {
+      padding: 1.65rem 0;
+    }
+    .icon p {
+      font-size: 0.77rem;
+    }
+    .inner-box .business-class {
+      flex-direction: column;
+    }
+}
