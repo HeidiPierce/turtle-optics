@@ -56,7 +56,6 @@ nav .response-menu {
   background-size: cover;
   height: 30rem;
   width: 100%;
-
 }
 .main-banner-box {
   display: flex;
@@ -91,11 +90,10 @@ nav .response-menu {
 }
 .inner-box {
   display: flex;
-
 }
 .business-info {
-  width: 50%;
-  padding: 0 3rem 5rem 0;
+  max-width: 50%;
+  padding: 0 3rem 4rem 0;
 }
 .business-info h2 {
   font-family: Helvetica;
@@ -104,15 +102,24 @@ nav .response-menu {
   background-color: cadetblue;
   color: white;
   width: 10rem;
-  padding: 0.5rem 1.25rem;
+  padding: 0.5rem 1.5rem;
 
 }
 .business-info p {
   padding-top: 1rem;
   width: 70%;
-
+}
+footer {
+  background-color: azure;
+}
+footer .logo {
+  padding: 4rem 1rem 4rem 2rem;
+  max-width: 100%;
 }
 @media only screen and (max-width: 480px) {
+    header .inner-box {
+      padding: 0.75rem;
+    }
     .logo h2 {
       display: none;
     }
@@ -127,12 +134,14 @@ nav .response-menu {
     nav ul {
       display: none;
     }
+    .stretch {
+      max-width: 100%;
+      height: auto;
+      background-position: 20%;
+    }
     .main-banner-box {
       align-items: flex-end;
       height: 17rem;
-    }
-    .banner-img {
-      width: 100%;
     }
     .banner-text {
       font-size: 1rem;
@@ -156,6 +165,22 @@ nav .response-menu {
       display: block;
     }
     .business-info {
+      max-width: 100%;
+
+    }
+    .business-info h2 {
+      width: 100%;
+      text-align: center;
+    }
+    .business-info p {
+      padding: 1rem 0 4rem;
+      width: 100%;
+      margin: 0 10px;
+    }
+    .logo {
+      max-width: 100%;
+    }
+    footer .logo img {
       margin: 0 auto;
     }
 }
