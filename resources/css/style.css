@@ -4,6 +4,8 @@ body {
   line-height: 1.4;
   background-color: white;
   box-sizing: border-box;
+  position: relative;
+
 }
 /*header*/
 header {
@@ -11,6 +13,14 @@ header {
   font-family: Helvetica;
   color: white;
   font-size: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 11%;
+  z-index: 1;
+  /*used this to fix length of header in both desktop & mobile version*/
+  max-width: 960px;
+  width: 100%;
+  height: 3rem;
 }
 .inner-box {
   max-width: 960px;
@@ -24,6 +34,7 @@ header .inner-box {
 .logo {
   display: flex;
   height: 100%;
+  padding-left: 2rem;
 }
 .logo img {
   height: 1.5rem;
@@ -38,6 +49,9 @@ nav .response-menu {
   color: white;
   text-decoration: none;
 }
+.menu li:last-child {
+  padding-right: 2rem;
+}
 .menu li {
   display: inline-block;
   padding: 20px 10px;
@@ -50,16 +64,21 @@ nav .response-menu {
   color: white;
   text-decoration: none;
 }
+
 .stretch {
   background-image: url("../images/main-banner-glasses.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 30rem;
   width: 100%;
+  position: relative;
 }
 .main-banner-box {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 8%;
+  margin-top: -25px;
+
 }
 .banner-text {
   background-color: white;
@@ -67,7 +86,7 @@ nav .response-menu {
   font-size: 2rem;
   font-weight: bold;
   line-height: 1.2;
-  padding: 1.5rem 5rem;
+  padding: 1.5rem 3rem;
 }
 .benefits .inner-box {
   display: flex;
@@ -103,23 +122,45 @@ nav .response-menu {
   color: white;
   width: 10rem;
   padding: 0.5rem 1.5rem;
-
 }
 .business-info p {
   padding-top: 1rem;
   width: 70%;
 }
-footer {
+footer .inner-box {
   background-color: azure;
 }
 footer .logo {
   padding: 4rem 1rem 4rem 2rem;
   max-width: 100%;
 }
-@media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 1024px) {
+    header {
+      width: auto;
+
+    }
+    .main-banner-box {
+      padding: 5rem 2rem 0 0;
+    }
+    .banner-text {
+      font-size: 1.33rem;
+      padding: 0.75rem 4rem;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    header {
+      position: relative;
+      top: -12px;
+      left: 0;
+      z-index: 1;
+    }
     header .inner-box {
       padding: 0.75rem;
     }
+    .logo {
+      padding: 10px 0 0;
+    }
+
     .logo h2 {
       display: none;
     }
@@ -134,14 +175,22 @@ footer .logo {
     nav ul {
       display: none;
     }
+    .response-menu {
+      padding-top: 10px;
+    }
+    /*this is how I made the background-img's sizing responsive*/
     .stretch {
-      max-width: 100%;
+      width: 100%;
       height: auto;
       background-position: 20%;
+
     }
     .main-banner-box {
-      align-items: flex-end;
+      position: relative;
       height: 17rem;
+      display: flex;
+      align-items: flex-end;
+
     }
     .banner-text {
       font-size: 1rem;
@@ -183,4 +232,4 @@ footer .logo {
     footer .logo img {
       margin: 0 auto;
     }
-}
+  }
